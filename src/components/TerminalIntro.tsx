@@ -13,7 +13,7 @@ export default function TerminalIntro({ onComplete }: TerminalIntroProps) {
   const [showCursor, setShowCursor] = useState(true);
   const [animationStep, setAnimationStep] = useState(0);
 
-  const promptHeader = "himanshu@paytm-prod-bastion:~$ ";
+  const promptHeader = "himanshu@linux:$ ";
 
   useEffect(() => {
     // Blinking cursor
