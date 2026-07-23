@@ -372,7 +372,7 @@ export default function Portfolio() {
             </h1>
             <TypingAlternate tokens={rollingTitles} />
             <p className="text-responsive-h5 text-[#c9c9c9] max-w-2xl leading-relaxed font-light">
-              Senior Lead Platform, SRE, and AI Infrastructure Engineer with 8+ years of experience in building production-grade agentic platforms, event-driven messaging networks, and cost-efficient multi-cloud systems.
+              Senior Lead Platform, SRE, and AI Infrastructure Engineer with 9 years of experience in building production-grade agentic platforms, event-driven messaging networks, and cost-efficient multi-cloud systems.
             </p>
             <div className="flex gap-4 mt-4">
               <button

@@ -21,7 +21,7 @@ const sourceCodePro = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: "Himanshu Yadav - Platform, SRE & AI Infrastructure Engineer",
-  description: "Senior Lead Platform, SRE & AI Infrastructure Engineer with 8+ years of experience scaling high-traffic systems, agentic platforms, and event-driven backbones.",
+  description: "Senior Lead Platform, SRE & AI Infrastructure Engineer with 9 years of experience scaling high-traffic systems, agentic platforms, and event-driven backbones.",
 };
 
 export default function RootLayout({
