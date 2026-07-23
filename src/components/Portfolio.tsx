@@ -135,7 +135,7 @@ function SectionFooter() {
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("landing");
   const [emailFormStatus, setEmailFormStatus] = useState<"idle" | "success" | "error">("idle");
-  const [focusedExperience, setFocusedExperience] = useState<number | null>(null);
+  const [activeExpTab, setActiveExpTab] = useState(0);
 
   const sections = [
     { id: "landing", label: "Landing" },
@@ -466,34 +466,40 @@ export default function Portfolio() {
         >
           <div className="max-w-5xl w-full">
             <SectionHeader title="WORK" />
-            <div className="relative flex flex-col gap-6 md:flex-row border-l md:border-l-0 md:border-t border-[#262626] pt-0 md:pt-8 pl-4 md:pl-0">
-              {experienceData.map((exp, index) => (
-                <div
-                  key={exp.company}
-                  onMouseEnter={() => setFocusedExperience(index)}
-                  onMouseLeave={() => setFocusedExperience(null)}
-                  className={`flex-1 relative cursor-default transition-all pb-6 md:pb-0 ${
-                    focusedExperience === null || focusedExperience === index
-                      ? "opacity-100"
-                      : "opacity-40"
-                  }`}
-                >
-                  {/* Decorative timeline node */}
-                  <div className="absolute -left-[21px] md:-left-0 top-[2px] md:-top-[38px] h-3 w-3 rounded-full bg-[#89ff69]"></div>
-                  
-                  <h3 className="font-headers text-responsive-h4 text-[#f2ff5b]">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12 min-h-[40vh] md:min-h-[50vh]">
+              {/* Tabs list */}
+              <div className="flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-[#262626] font-terminal text-sm md:text-base whitespace-nowrap md:whitespace-normal md:min-w-[180px]">
+                {experienceData.map((exp, index) => (
+                  <button
+                    key={exp.company}
+                    onClick={() => setActiveExpTab(index)}
+                    className={`px-4 py-2.5 text-left border-b-2 md:border-b-0 md:border-l-2 transition-all cursor-pointer ${
+                      activeExpTab === index
+                        ? "text-[#89ff69] border-[#89ff69] bg-[#141414]/30"
+                        : "text-[#c9c9c9] border-transparent hover:text-[#f2ff5b] hover:bg-[#141414]/10"
+                    }`}
+                  >
                     {exp.company}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tab content panel */}
+              <div className="flex-1 flex flex-col gap-4 bg-[#141414]/20 border border-[#262626] rounded-lg p-6 overflow-y-auto max-h-[42vh] md:max-h-[50vh] scrollbar-thin">
+                <div>
+                  <h3 className="font-headers text-responsive-h4 text-[#f2ff5b]">
+                    {experienceData[activeExpTab].role}
                   </h3>
-                  <div className="font-terminal text-sm text-[#89ff69] mt-1 mb-3">
-                    {exp.role} | {exp.period}
+                  <div className="font-terminal text-[#89ff69] text-xs md:text-sm mt-1">
+                    {experienceData[activeExpTab].company} | {experienceData[activeExpTab].period} | {experienceData[activeExpTab].location}
                   </div>
-                  <ul className="text-[#c9c9c9] text-sm md:text-base leading-relaxed flex flex-col gap-2 list-disc pl-4 font-light">
-                    {exp.bullets.map((bullet, idx) => (
-                      <li key={idx}>{bullet}</li>
-                    ))}
-                  </ul>
                 </div>
-              ))}
+                <ul className="text-[#c9c9c9] text-sm md:text-base leading-relaxed flex flex-col gap-2.5 list-disc pl-4 font-light">
+                  {experienceData[activeExpTab].bullets.map((bullet, idx) => (
+                    <li key={idx} className="hover:text-[#e1e1e1] transition-colors">{bullet}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <SectionFooter />
           </div>
