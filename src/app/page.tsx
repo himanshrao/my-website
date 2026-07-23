@@ -5,7 +5,7 @@ import TerminalIntro from "@/components/TerminalIntro";
 import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
-  const [introCompleted, setIntroCompleted] = useState(false);
+  const [introCompleted, setIntroCompleted] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   const handleComplete = () => {
