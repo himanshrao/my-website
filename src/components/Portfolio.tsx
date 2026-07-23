@@ -195,54 +195,52 @@ export default function Portfolio() {
     }
   };
 
-  // Resume details from consolidated_resume_master.md
+  // Resume details from consolidated_resume_master_final.pdf
   const skillsData = [
     {
-      title: "AI & Agentic Systems",
-      skills: ["LangChain", "LangGraph", "Agentic SDLC", "LLM Canary Analysis", "Vector Stores & RAG", "MCP (Model Context)", "LangSmith / Observability"],
+      title: "Data Streaming & CDC",
+      skills: ["Apache Kafka", "Debezium", "Change Data Capture", "Event-Driven Architecture"],
     },
     {
       title: "Cloud & Orchestration",
-      skills: ["Kubernetes (EKS/GKE)", "Terraform & IaC", "ArgoCD & GitOps", "Docker & Helm", "AWS & GCP Cloud", "Ansible & DevPod"],
+      skills: ["AWS (EKS, Lambda, S3, Athena, Route 53)", "GCP (GKE)", "Azure", "Kubernetes", "Docker", "Terraform", "Helm", "GitOps (ArgoCD)", "Ansible", "DevPod"],
     },
     {
       title: "Observability & SRE",
-      skills: ["OpenTelemetry (Otel)", "Prometheus & Grafana", "Tempo & Loki (Traces)", "New Relic & Elastic APM", "SLO/SLA Performance", "Linux System Debugging"],
+      skills: ["OpenTelemetry (Otel)", "Prometheus", "Grafana", "Loki", "Tempo", "New Relic", "Elastic APM", "Dynatrace", "ELK", "Sentry"],
     },
     {
-      title: "Messaging & State",
-      skills: ["Apache Kafka", "EMQX & MQTT Backbone", "Valkey / Redis Clusters", "PostgreSQL", "SQL Datastores"],
+      title: "Messaging & Databases",
+      skills: ["EMQX", "MQTT", "Valkey", "Redis", "PostgreSQL", "MySQL", "MongoDB"],
     },
     {
-      title: "Programming",
-      skills: ["Go / Golang", "Python", "Node.js (TS/JS)", "Bash scripting"],
+      title: "Programming Languages",
+      skills: ["Go", "Python", "Node.js", "Bash", "SQL"],
     },
   ];
 
   const experienceData = [
     {
       company: "Paytm",
-      role: "Senior Lead SRE & AI Infrastructure Engineer",
+      role: "Senior Lead DevOps",
       period: "Jun 2021 – Present",
       location: "Gurgaon, India",
       bullets: [
-        "Led critical messaging backbone migration to EMQX (MQTT) and Apache Kafka on Kubernetes, handling petabyte-scale event ingestion and saving $300K/month.",
-        "Architected and scaled high-throughput EKS/GKE Kubernetes platforms supporting AI-driven consumer apps with 99.99% availability.",
-        "Designed 'Agentic DevOps' initiatives using LLM-backed AI agents to automate complex migrations, monitoring, testing, and ticket grooming.",
-        "Designed and scaled native OpenTelemetry pipelines with Grafana Tempo/Loki for real-time trace propagation and incident resolution.",
-        "Orchestrated zero-downtime migration of high-throughput caching layers to Valkey on Kubernetes.",
-        "Optimized infrastructure cost via AWS Graviton migration for 200+ production instances.",
+        "Messaging Backbone Migration: Led the end-to-end migration of Paytm's critical messaging backbone to in-house EMQX (MQTT) and Apache Kafka on Kubernetes, handling petabyte-scale event ingestion and achieving $300K/month in cloud cost savings.",
+        "Platform & Kubernetes Scale: Co-architected and scaled EKS/GKE platforms supporting AI-driven consumer apps with 99.99% availability, leveraging HPA/VPA and AWS Graviton migrations (200+ instances) for optimized autoscaling.",
+        "Agentic DevOps Initiatives: Designed 'Agentic DevOps' initiatives using LLM-backed AI agents to automate complex migrations, monitoring, testing, and custom Go/Python Kubernetes controllers.",
+        "Deep Observability & Caching: Designed and scaled native OpenTelemetry (Otel) observability pipelines (Grafana/Tempo/Loki) for real-time trace propagation, and orchestrated zero-downtime caching layer migrations to Valkey.",
       ],
     },
     {
       company: "G4S IT Services",
-      role: "DevOps & Observability Consultant",
+      role: "DevOps consultant",
       period: "Jul 2018 – May 2021",
       location: "Gurgaon, India",
       bullets: [
-        "Led GCP cloud modernization for enterprise-scale platforms, focusing on high availability, secure API design, and resilient distributed systems.",
-        "Implemented APM using New Relic, OpenTelemetry, and Elastic APM, improving system throughput by 50% through data-driven tuning.",
-        "Strengthened security postures, integrating RBAC, TLS, and secrets management into CI/CD pipelines.",
+        "Enterprise Cloud Modernization: Led cloud modernization initiatives on GCP for enterprise-scale platforms, focusing on high availability, secure API design, and resilient distributed systems.",
+        "Application Performance Monitoring (APM): Implemented comprehensive application performance monitoring using New Relic, OpenTelemetry, and Elastic APM, improving system throughput by 50% through data-driven tuning.",
+        "Security & Compliance: Strengthened platform security posture and compliance across hybrid environments, integrating security (RBAC, TLS, secrets management) into CI/CD pipelines.",
       ],
     },
     {
@@ -251,8 +249,8 @@ export default function Portfolio() {
       period: "Jan 2017 – Jun 2018",
       location: "Chandigarh, India",
       bullets: [
-        "Owned DevOps for consumer platforms, designing robust multi-AZ failover architectures using AWS to ensure 99.99% availability.",
-        "Automated provisioning and failover using Terraform and Bash, significantly reducing MTTR and manual overhead.",
+        "High Availability & Failover: Owned DevOps for consumer-facing platforms, designing robust multi-AZ failover architectures using AWS (EC2, Route 53, ELB) to ensure 99.99% availability.",
+        "Infrastructure Automation & SRE: Automated infrastructure provisioning and multi-AZ failover using Terraform/Bash, reducing MTTR and manual overhead, and built end-to-end alerting systems.",
       ],
     },
   ];
@@ -409,6 +407,11 @@ export default function Portfolio() {
                   <KubernetesIcon className="text-[#89ff69] animate-spin-slow" />
                   <span>I run in production btw</span>
                 </div>
+                <div className="flex flex-col gap-1.5 font-terminal text-sm text-[#c9c9c9] border border-[#262626] rounded-lg p-4 bg-[#141414]/30 w-fit">
+                  <div className="text-[#f2ff5b] font-bold">EDUCATION</div>
+                  <div>B.Tech in Computer Science</div>
+                  <div className="opacity-80 text-xs">I.E.T, Alwar | 2013 – 2017</div>
+                </div>
               </div>
               <div className="flex-[1.5] flex flex-col gap-6 text-[#c9c9c9] text-responsive-h5 font-light leading-relaxed">
                 <p>
@@ -485,7 +488,7 @@ export default function Portfolio() {
                     {exp.role} | {exp.period}
                   </div>
                   <ul className="text-[#c9c9c9] text-sm md:text-base leading-relaxed flex flex-col gap-2 list-disc pl-4 font-light">
-                    {exp.bullets.slice(0, 3).map((bullet, idx) => (
+                    {exp.bullets.map((bullet, idx) => (
                       <li key={idx}>{bullet}</li>
                     ))}
                   </ul>
