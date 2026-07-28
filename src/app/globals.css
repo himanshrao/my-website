@@ -53,10 +53,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-main overflow-x-hidden;
+    @apply bg-background text-foreground font-main overflow-hidden h-[100dvh];
   }
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans scroll-smooth h-[100dvh] overflow-hidden;
   }
 }
 
