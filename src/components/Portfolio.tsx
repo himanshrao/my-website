@@ -199,7 +199,7 @@ export default function Portfolio() {
   const skillsData = [
     {
       title: "DevSecOps & Security",
-      skills: ["HashiCorp Vault", "Kyverno / OPA", "Trivy", "Snyk", "Cosign / Signature Verification", "Secret Management", "SAST/DAST", "CIS Benchmarks", "RBAC / IAM"],
+      skills: ["Secrets Management", "RBAC (Role-Based Access Control)", "TLS / SSL Encryption", "Secure CI/CD", "Platform Compliance"],
     },
     {
       title: "Platform & Orchestration",
@@ -266,11 +266,6 @@ export default function Portfolio() {
       tags: ["EMQX", "MQTT", "Kafka", "Kubernetes", "FinOps"],
     },
     {
-      name: "DevSecOps GitOps Pipeline",
-      description: "Designed secure GitOps deployment pipelines with automated Kyverno policies, Snyk vulnerability scanning, Cosign signature validation, and Vault secrets integration.",
-      tags: ["DevSecOps", "Vault", "Kyverno", "ArgoCD", "Kubernetes"],
-    },
-    {
       name: "Agentic DevOps Platform",
       description: "Autonomous LLM-backed DevOps agents that automate complex infrastructure migration, system monitoring, and Jira epic grooming.",
       tags: ["LLM", "LangChain", "Agentic SDLC", "Python"],
@@ -280,12 +275,17 @@ export default function Portfolio() {
       description: "Zero-downtime migration of Paytm's high-throughput caching layers to Valkey on Kubernetes, optimizing memory layouts and system latency.",
       tags: ["Valkey", "Redis", "Kubernetes", "SRE"],
     },
+    {
+      name: "FinOps Graviton Migration",
+      description: "Platform migration of 200+ EKS nodes to AWS Graviton, optimizing LLM token cost metrics and reducing infrastructure spend.",
+      tags: ["AWS Graviton", "Athena", "Cloud Cost", "S3"],
+    },
   ];
 
   const rollingTitles = [
     "SENIOR LEAD PLATFORM ENGINEER",
     "DEVSECOPS & SECURITY SPECIALIST",
-    "SRE & AI INFRASTRUCTURE",
+    "PLATFORM & AI INFRASTRUCTURE",
     "AGENTIC DEVOPS EXPERT",
     "MULTI-CLOUD ARCHITECT",
     "KUBERNETES & GITOPS CHAMPION",
@@ -409,7 +409,7 @@ export default function Portfolio() {
                 </p>
                 <div className="flex items-center gap-3 text-[#c9c9c9] font-terminal border border-[#262626] rounded-lg p-4 bg-[#141414]/30 w-fit">
                   <KubernetesIcon className="text-[#89ff69] animate-spin-slow" />
-                  <span>Platform & SRE Architect</span>
+                  <span>Platform Architect</span>
                 </div>
                 <div className="flex flex-col gap-1.5 font-terminal text-sm text-[#c9c9c9] border border-[#262626] rounded-lg p-4 bg-[#141414]/30 w-fit">
                   <div className="text-[#f2ff5b] font-bold">EDUCATION</div>

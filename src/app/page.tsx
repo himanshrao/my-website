@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0c0c0c] text-[#e1e1e1] select-none font-main">
+    <main className="min-h-[100dvh] bg-[#0c0c0c] text-[#e1e1e1] select-none font-main">
       {!introCompleted ? (
         <div
           className={`transition-opacity duration-700 ease-out ${

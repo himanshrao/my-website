@@ -83,7 +83,7 @@
 /* Scroll snap setup */
 .scroll-snap-container {
   scroll-snap-type: y mandatory;
-  height: 100vh;
+  height: 100dvh;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
 }
@@ -92,7 +92,7 @@
 }
 .scroll-snap-section {
   scroll-snap-align: start;
-  height: 100vh;
+  height: 100dvh;
   position: relative;
 }
 
