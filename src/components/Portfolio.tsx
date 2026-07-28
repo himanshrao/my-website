@@ -195,27 +195,31 @@ export default function Portfolio() {
     }
   };
 
-  // Resume details from consolidated_resume_master_final.pdf
+  // Resume details from consolidated_resume_master_final_9yrs.pdf
   const skillsData = [
     {
-      title: "Data Streaming & CDC",
-      skills: ["Apache Kafka", "Debezium", "Change Data Capture", "Event-Driven Architecture"],
+      title: "DevSecOps & Security",
+      skills: ["HashiCorp Vault", "Kyverno / OPA", "Trivy", "Snyk", "Cosign / Signature Verification", "Secret Management", "SAST/DAST", "CIS Benchmarks", "RBAC / IAM"],
     },
     {
-      title: "Cloud & Orchestration",
-      skills: ["AWS (EKS, Lambda, S3, Athena, Route 53)", "GCP (GKE)", "Azure", "Kubernetes", "Docker", "Terraform", "Helm", "GitOps (ArgoCD)", "Ansible", "DevPod"],
+      title: "Platform & Orchestration",
+      skills: ["AWS (EKS, Lambda, S3, Athena, Route 53)", "GCP (GKE)", "Kubernetes", "Docker & Containerization", "Terraform & Infrastructure as Code", "Helm", "GitOps (ArgoCD)", "Ansible", "DevPod"],
     },
     {
       title: "Observability & SRE",
-      skills: ["OpenTelemetry (Otel)", "Prometheus", "Grafana", "Loki", "Tempo", "New Relic", "Elastic APM", "Dynatrace", "ELK", "Sentry"],
+      skills: ["OpenTelemetry (Otel)", "Prometheus & Grafana", "Loki & Tempo (Traces/Logs)", "New Relic & Elastic APM", "Dynatrace", "ELK Stack", "Sentry", "SLOs / SLAs & Alerting"],
+    },
+    {
+      title: "Data Streaming & CDC",
+      skills: ["Apache Kafka", "Debezium", "Change Data Capture", "Event-Driven Architecture"],
     },
     {
       title: "Messaging & Databases",
       skills: ["EMQX", "MQTT", "Valkey", "Redis", "PostgreSQL", "MySQL", "MongoDB"],
     },
     {
-      title: "Programming Languages",
-      skills: ["Go", "Python", "Node.js", "Bash", "SQL"],
+      title: "Programming & Scripts",
+      skills: ["Go / Golang", "Python", "Node.js", "Bash scripting", "SQL"],
     },
   ];
 
@@ -228,7 +232,7 @@ export default function Portfolio() {
       bullets: [
         "Messaging Backbone Migration: Led the end-to-end migration of Paytm's critical messaging backbone to in-house EMQX (MQTT) and Apache Kafka on Kubernetes, handling petabyte-scale event ingestion and achieving $300K/month in cloud cost savings.",
         "Platform & Kubernetes Scale: Co-architected and scaled EKS/GKE platforms supporting AI-driven consumer apps with 99.99% availability, leveraging HPA/VPA and AWS Graviton migrations (200+ instances) for optimized autoscaling.",
-        "Agentic DevOps Initiatives: Designed 'Agentic DevOps' initiatives using LLM-backed AI agents to automate complex migrations, monitoring, testing, and custom Go/Python Kubernetes controllers.",
+        "Agentic DevOps & SecOps: Designed 'Agentic DevOps' initiatives using LLM-backed AI agents to automate complex migrations, automated security scans, configuration compliance testing, and custom Go/Python Kubernetes controllers.",
         "Deep Observability & Caching: Designed and scaled native OpenTelemetry (Otel) observability pipelines (Grafana/Tempo/Loki) for real-time trace propagation, and orchestrated zero-downtime caching layer migrations to Valkey.",
       ],
     },
@@ -240,7 +244,7 @@ export default function Portfolio() {
       bullets: [
         "Enterprise Cloud Modernization: Led cloud modernization initiatives on GCP for enterprise-scale platforms, focusing on high availability, secure API design, and resilient distributed systems.",
         "Application Performance Monitoring (APM): Implemented comprehensive application performance monitoring using New Relic, OpenTelemetry, and Elastic APM, improving system throughput by 50% through data-driven tuning.",
-        "Security & Compliance: Strengthened platform security posture and compliance across hybrid environments, integrating security (RBAC, TLS, secrets management) into CI/CD pipelines.",
+        "DevSecOps & Compliance: Strengthened platform security posture and compliance across hybrid environments, integrating automated security guardrails (RBAC, TLS, secrets management, vulnerability scans) into CI/CD pipelines.",
       ],
     },
     {
@@ -262,6 +266,11 @@ export default function Portfolio() {
       tags: ["EMQX", "MQTT", "Kafka", "Kubernetes", "FinOps"],
     },
     {
+      name: "DevSecOps GitOps Pipeline",
+      description: "Designed secure GitOps deployment pipelines with automated Kyverno policies, Snyk vulnerability scanning, Cosign signature validation, and Vault secrets integration.",
+      tags: ["DevSecOps", "Vault", "Kyverno", "ArgoCD", "Kubernetes"],
+    },
+    {
       name: "Agentic DevOps Platform",
       description: "Autonomous LLM-backed DevOps agents that automate complex infrastructure migration, system monitoring, and Jira epic grooming.",
       tags: ["LLM", "LangChain", "Agentic SDLC", "Python"],
@@ -271,20 +280,15 @@ export default function Portfolio() {
       description: "Zero-downtime migration of Paytm's high-throughput caching layers to Valkey on Kubernetes, optimizing memory layouts and system latency.",
       tags: ["Valkey", "Redis", "Kubernetes", "SRE"],
     },
-    {
-      name: "FinOps Graviton Migration",
-      description: "Platform migration of 200+ EKS nodes to AWS Graviton, optimizing LLM token cost metrics and reducing infrastructure spend.",
-      tags: ["AWS Graviton", "Athena", "Cloud Cost", "S3"],
-    },
   ];
 
   const rollingTitles = [
     "SENIOR LEAD PLATFORM ENGINEER",
+    "DEVSECOPS & SECURITY SPECIALIST",
     "SRE & AI INFRASTRUCTURE",
     "AGENTIC DEVOPS EXPERT",
     "MULTI-CLOUD ARCHITECT",
-    "FINOPS CHAMPION",
-    "KUBERNETES SPECIALIST",
+    "KUBERNETES & GITOPS CHAMPION",
   ];
 
   return (
