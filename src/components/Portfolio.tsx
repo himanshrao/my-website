@@ -409,7 +409,7 @@ export default function Portfolio() {
                 </p>
                 <div className="flex items-center gap-3 text-[#c9c9c9] font-terminal border border-[#262626] rounded-lg p-4 bg-[#141414]/30 w-fit">
                   <KubernetesIcon className="text-[#89ff69] animate-spin-slow" />
-                  <span>I run in production btw</span>
+                  <span>Platform & SRE Architect</span>
                 </div>
                 <div className="flex flex-col gap-1.5 font-terminal text-sm text-[#c9c9c9] border border-[#262626] rounded-lg p-4 bg-[#141414]/30 w-fit">
                   <div className="text-[#f2ff5b] font-bold">EDUCATION</div>
